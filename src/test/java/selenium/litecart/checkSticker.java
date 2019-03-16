@@ -9,7 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -19,10 +18,6 @@ import static org.junit.Assert.assertTrue;
 public class checkSticker {
     private WebDriver driver;
     private WebDriverWait wait;
-
-    public boolean isOnlyOne(By locator) {
-        return driver.findElements(locator).size() == 1;
-    }
 
     @Before
     public void start() {
@@ -35,7 +30,7 @@ public class checkSticker {
     public void checkStick() {
         driver.get("http://localhost/litecart/");
 
-        List<WebElement> list = driver.findElements(By.cssSelector("ul.listing-wrapper > li"));
+        List<WebElement> list = driver.findElements(By.cssSelector("li.product"));
 
 
             for (int i = 0; i < list.size(); i++) {
