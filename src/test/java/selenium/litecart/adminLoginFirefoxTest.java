@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 
-public class adminLoginTest {
+public class adminLoginFirefoxTest {
     private WebDriver driver;
     private WebDriverWait wait;
 

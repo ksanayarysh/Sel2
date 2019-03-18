@@ -12,27 +12,20 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 
-public class adminLoginTest {
-    private WebDriver driverChrome;
-    private WebDriver driverEdge;
-    private WebDriver driverFirefox;
+public class adminLoginTestChrome {
+    private WebDriver driver;
     private WebDriverWait wait;
 
     @Before
     public void start() {
-        System.setProperty("webdriver.edge.driver", "c:\\tools\\MicrosoftWebDriver.exe");
         System.setProperty("webdriver.chrome.driver", "c:\\tools\\chromedriver.exe");
-        System.setProperty("webdriver.geckodriver.driver", "c:\\tools\\geckodriver.exe");
-        System.setProperty("webdriver.ie.driver", "c:\\tools\\IEDriverServer.exe");
-        driverChrome = new ChromeDriver();
-        driverEdge = new EdgeDriver();
-        driverFirefox = new FirefoxDriver();
-//        wait = new WebDriverWait(driver, 10);
+        driver = new ChromeDriver();
+        wait = new WebDriverWait(driver, 10);
     }
 
     @Test
     public void loginChrome(){
-        driver.get("http:/localhost:8080/litecart/admin/");
+        driver.get("http:/localhost/litecart/admin/");
 
         driver.findElement(By.xpath("//*[@name=\"username\"]")).sendKeys("admin");
         driver.findElement(By.xpath("//*[@name=\"password\"]")).sendKeys("123456");

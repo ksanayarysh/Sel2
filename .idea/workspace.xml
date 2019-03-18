@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f3435ec-9069-4969-9c2e-e2790d844fc2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/selenium/MyFirstTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/selenium/litecart/lesson5/CheckDuck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/selenium/MyFirstTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/selenium/MyFirstTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenium/MyFirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/selenium/MyFirstTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenium/litecart/adminLoginFirefoxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/selenium/litecart/adminLoginFirefoxTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenium/litecart/adminLoginTestChrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/selenium/litecart/adminLoginTestChrome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenium/litecart/adminLoginTestEdge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/selenium/litecart/adminLoginTestEdge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/selenium/litecart/adminLoginTestFirefox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/selenium/litecart/adminLoginTestFirefox.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -23,31 +28,54 @@
     </projectState>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
+        <entry file="file://$PROJECT_DIR$/src/test/java/selenium/litecart/lesson5/CheckAlpha.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" lean-forward="true" selection-start-line="15" selection-start-column="60" selection-end-line="17" />
+            <state relative-caret-position="199">
+              <caret line="92" lean-forward="true" selection-start-line="91" selection-end-line="92" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1552803596630" expanded="true" signature="725:1044" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/selenium/litecart/lesson5/CheckDuck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="347">
+              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/settings.gradle">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/selenium/MyFirstTest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/selenium/litecart/lesson5/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+            <state relative-caret-position="318">
+              <caret line="33" selection-start-line="27" selection-end-line="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#386#387#0" expanded="true" />
+                <element signature="e#415#416#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,14 +84,28 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/test/java/selenium/MyFirstTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/selenium/litecart/adminLoginTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/selenium/litecart/adminLoginTestChrome.java" />
+        <option value="$PROJECT_DIR$/src/test/java/selenium/litecart/adminLoginTestEdge.java" />
+        <option value="$PROJECT_DIR$/src/test/java/selenium/litecart/adminLoginTestFirefox.java" />
+        <option value="$PROJECT_DIR$/src/test/java/selenium/litecart/adminLoginFirefoxTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/selenium/litecart/checkSticker.java" />
+        <option value="$PROJECT_DIR$/src/test/java/selenium/litecart/CheckAlpha.java" />
+        <option value="$PROJECT_DIR$/src/test/java/selenium/litecart/lesson5/Test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/selenium/litecart/lesson5/Test1.java" />
+        <option value="$PROJECT_DIR$/src/test/java/selenium/litecart/lesson5/CheckAlphaCountry.java" />
+        <option value="$PROJECT_DIR$/src/test/java/selenium/litecart/lesson5/CheckAlpha.java" />
+        <option value="$PROJECT_DIR$/src/test/java/selenium/litecart/lesson5/BaseTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/selenium/litecart/lesson5/CheckDuck.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="3" />
-    <option name="y" value="-14" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1366" />
+    <option name="height" value="515" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -74,7 +116,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -100,14 +141,48 @@
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="lesson2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lesson2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="selenium" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lesson2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lesson2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="selenium" type="462c0819:PsiDirectoryNode" />
+              <item name="litecart" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lesson2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lesson2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="selenium" type="462c0819:PsiDirectoryNode" />
+              <item name="litecart" type="462c0819:PsiDirectoryNode" />
+              <item name="lesson5" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551807668742" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552833830591" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="selenium.litecart.lesson5" />
+      <recent name="selenium.litecart" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -121,25 +196,91 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="MyFirstTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CheckDuck">
+    <configuration name="CheckAlpha" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ru.qa.lesson2.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="selenium.*" />
+          <option name="PATTERN" value="selenium.litecart.lesson5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="selenium" />
-      <option name="MAIN_CLASS_NAME" value="selenium.MyFirstTest" />
+      <option name="PACKAGE_NAME" value="selenium.litecart.lesson5" />
+      <option name="MAIN_CLASS_NAME" value="selenium.litecart.lesson5.CheckAlpha" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckAlpha.checkZone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ru.qa.lesson2.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="selenium.litecart.lesson5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="selenium.litecart.lesson5" />
+      <option name="MAIN_CLASS_NAME" value="selenium.litecart.lesson5.CheckAlpha" />
+      <option name="METHOD_NAME" value="checkZone" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckDuck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ru.qa.lesson2.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="selenium.litecart.lesson5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="selenium.litecart.lesson5" />
+      <option name="MAIN_CLASS_NAME" value="selenium.litecart.lesson5.CheckDuck" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ru.qa.lesson2.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="selenium.litecart.lesson5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="selenium.litecart.lesson5" />
+      <option name="MAIN_CLASS_NAME" value="selenium.litecart.lesson5.Test1" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="checkSticker.checkStick" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ru.qa.lesson2.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="selenium.litecart.lesson5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="selenium.litecart" />
+      <option name="MAIN_CLASS_NAME" value="selenium.litecart.checkSticker" />
+      <option name="METHOD_NAME" value="checkStick" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MyFirstTest" />
+        <item itemvalue="JUnit.CheckDuck" />
+        <item itemvalue="JUnit.CheckAlphaCountry" />
+        <item itemvalue="JUnit.CheckAlpha.checkZone" />
+        <item itemvalue="JUnit.Test1" />
+        <item itemvalue="JUnit.checkSticker.checkStick" />
       </list>
     </recent_temporary>
   </component>
@@ -156,44 +297,96 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="CheckDuck - 2019.03.17 at 18h 09m 26s.xml">
+      <configuration name="CheckDuck" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CheckDuck - 2019.03.17 at 18h 11m 15s.xml">
+      <configuration name="CheckDuck" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CheckDuck - 2019.03.17 at 18h 17m 53s.xml">
+      <configuration name="CheckDuck" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CheckDuck - 2019.03.17 at 18h 20m 03s.xml">
+      <configuration name="CheckDuck" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CheckDuck - 2019.03.17 at 18h 21m 13s.xml">
+      <configuration name="CheckDuck" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CheckDuck - 2019.03.17 at 18h 22m 38s.xml">
+      <configuration name="CheckDuck" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CheckDuck - 2019.03.17 at 18h 31m 15s.xml">
+      <configuration name="CheckDuck" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CheckDuck - 2019.03.17 at 18h 35m 12s.xml">
+      <configuration name="CheckDuck" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CheckDuck - 2019.03.17 at 18h 36m 25s.xml">
+      <configuration name="CheckDuck" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CheckDuck - 2019.03.17 at 18h 49m 07s.xml">
+      <configuration name="CheckDuck" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Build" visible="true" weight="0.328594" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34123224" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39968404" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Gradle" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.328594" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.328594" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Gradle" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/selenium/litecart/lesson5/CheckAlpha.java</url>
+          <line>62</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test/java/selenium/litecart/adminLoginFirefoxTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="15" selection-start-column="60" selection-end-line="17" />
+          <caret line="17" selection-start-line="15" selection-start-column="60" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -202,8 +395,93 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/selenium/MyFirstTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        <state relative-caret-position="238">
+          <caret line="27" selection-start-line="23" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/selenium/litecart/adminLoginTestFirefox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/selenium/litecart/adminLoginTestEdge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="31" column="70" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/selenium/litecart/checkSticker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/selenium/litecart/lesson4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="39" lean-forward="true" selection-start-line="34" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/selenium/litecart/adminLoginTestChrome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/selenium/litecart/lesson5/Test1.java" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/Assert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="833" selection-start-line="833" selection-end-line="833" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/selenium/litecart/lesson5/CheckAlpha.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="92" lean-forward="true" selection-start-line="91" selection-end-line="92" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1552803596630" expanded="true" signature="725:1044" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/selenium/litecart/lesson5/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="33" selection-start-line="27" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/selenium/litecart/lesson5/CheckDuck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
