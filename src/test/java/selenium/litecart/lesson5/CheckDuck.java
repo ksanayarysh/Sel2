@@ -2,19 +2,24 @@ package selenium.litecart.lesson5;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.awt.*;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 
-
-public class CheckDuck extends BaseTest {
+public class CheckDuck {
+    private WebDriver driver;
 
     public boolean parseGray(String input) {
         Pattern c = Pattern.compile("rgba *\\( *([0-9]+), *\\1, *\\1, *[0-9] *\\)");
@@ -22,6 +27,7 @@ public class CheckDuck extends BaseTest {
 
         return m.matches();
     }
+
     public boolean parseRed(String input) {
         Pattern c = Pattern.compile("rgba *\\( *([0-9]+), *0, *0, *[0-9] *\\)");
         Matcher m = c.matcher(input);
@@ -29,61 +35,123 @@ public class CheckDuck extends BaseTest {
         return m.matches();
     }
 
-    @Test
-    public void checkDuck(){
-        getDriver().get("http:/localhost/litecart/");
+    public void checkDuck(WebDriver driver) {
+        driver.get("http://localhost/litecart/");
 
-        List<WebElement> products = getDriver().findElements(By.cssSelector("#box-campaigns  li.product"));
+        List<WebElement> products = driver.findElements(By.cssSelector("#box-campaigns  li.product"));
 
         assertTrue(products.size() > 0);
 
         WebElement product = products.get(0);
 
         // Получаем название и цены с главной страницы
-        String mainName = product.findElement(By.cssSelector("div.name")).getAttribute("textContent");
-        String mainRegularPrice = product.findElement(By.cssSelector(".regular-price")).getAttribute("textContent");
-        String mainCampaignPrice = product.findElement(By.cssSelector(".campaign-price")).getAttribute("textContent");
+        String mainName = product.findElement(By.cssSelector("div.name")).getText();
+        String mainRegularPrice = product.findElement(By.cssSelector(".regular-price")).getText();
+        String mainCampaignPrice = product.findElement(By.cssSelector(".campaign-price")).getText();
 
         // Проверяем, что цвет обычной цены серый
         String colorRegular = product.findElement(By.cssSelector(".regular-price")).getCssValue("color");
         assertTrue(parseGray(colorRegular));
 
         // Проверяем, что обычная цена зачеркнута
-        String textDecorationRegular = product.findElement(By.cssSelector(".regular-price"))
-                .getCssValue("text-decoration-line");
-        assertEquals("line-through", textDecorationRegular);
+        String regularTag = product.findElement(By.cssSelector(".regular-price")).getTagName();
+        assertEquals("s", regularTag);
+
 
         // Получаем размер шрифта обычной цены
+        // если она типа em, то умножаем ее на родительский размер шрифта
         String sizeRegular = product.findElement(By.cssSelector(".regular-price"))
                 .getCssValue("font-size");
-        System.out.println(sizeRegular);
+        double sizeRegularDouble = Double.parseDouble(sizeRegular.substring(0, sizeRegular.length() - 2));
+        // Типа размера шрифта
+        String sizeRegularType = sizeRegular.substring(sizeRegular.length() - 2);
+        if (sizeRegularType.equals("em")){
+            String parentPriceStr =  product.getCssValue("font-size");
+            double parentPrice = Double.parseDouble(parentPriceStr.substring(0, parentPriceStr.length() - 2));
+            sizeRegularDouble *= parentPrice;
+        }
 
         // Получаем цвет для акционной цены, убежаемся, что она красная
         String colorCamp = product.findElement(By.cssSelector(".campaign-price")).getCssValue("color");
         assertTrue(parseRed(colorCamp));
 
         // Убеждаемся, что акционная цена жирная
-        String textDecorationCamp = product.findElement(By.cssSelector(".campaign-price"))
-                .getAttribute("tagName");
-        assertEquals("STRONG", textDecorationCamp);
+        String textDecorationCamp = product.findElement(By.cssSelector(".campaign-price")).getTagName();
+        assertEquals("STRONG", textDecorationCamp.toUpperCase());
 
-        // Получаем размер шрифта обычной цены
+        // Получаем размер шрифта акционной цены
         String sizeCamp = product.findElement(By.cssSelector(".campaign-price"))
                 .getCssValue("font-size");
-        System.out.println(sizeCamp);
+        double sizeCampDouble = Double.parseDouble(sizeCamp.substring(0, sizeCamp.length() - 2));
+        // Проверяем, что акционная цена больше обычной
+        assertTrue(sizeCampDouble > sizeRegularDouble);
 
 
         // Переходим на страницу утки
-        getDriver().findElement(By.cssSelector("#box-campaigns  li.product a")).click();
+        driver.findElement(By.cssSelector("#box-campaigns  li.product a")).click();
         // Получаем ее заголовок и цены
-        String pageName = getDriver().findElement(By.cssSelector("h1")).getAttribute("textContent");
-        String pageRegularPrice = getDriver().findElement(By.cssSelector(".regular-price")).getAttribute("textContent");
-        String pageCampaignPrice = getDriver().findElement(By.cssSelector(".campaign-price")).getAttribute("textContent");
+        String pageName = driver.findElement(By.cssSelector("h1")).getText();
+        String pageRegularPrice = driver.findElement(By.cssSelector(".regular-price")).getText();
+        String pageCampaignPrice = driver.findElement(By.cssSelector(".campaign-price")).getText();
 
         // Сравниваем заголовк и цены
         assertEquals(mainName, pageName);
         assertEquals(mainRegularPrice, pageRegularPrice);
         assertEquals(mainCampaignPrice, pageCampaignPrice);
 
+        // Проверяем, что цвет обычной цены серый
+        colorRegular = driver.findElement(By.cssSelector(".regular-price")).getCssValue("color");
+        assertTrue(parseGray(colorRegular));
+
+        // Проверяем, что обычная цена зачеркнута
+        regularTag = driver.findElement(By.cssSelector(".regular-price")).getTagName();
+        assertEquals("s", regularTag);
+
+        // Получаем размер шрифта обычной цены
+        sizeRegular = driver.findElement(By.cssSelector(".regular-price"))
+                .getCssValue("font-size");
+        sizeRegularDouble = Double.parseDouble(sizeRegular.substring(0, sizeRegular.length() - 2));
+
+        // Получаем цвет для акционной цены, убежаемся, что она красная
+        colorCamp = driver.findElement(By.cssSelector(".campaign-price")).getCssValue("color");
+        assertTrue(parseRed(colorCamp));
+
+        // Убеждаемся, что акционная цена жирная
+        textDecorationCamp = driver.findElement(By.cssSelector(".campaign-price")).getTagName();
+        assertEquals("STRONG", textDecorationCamp.toUpperCase());
+
+        // Получаем размер шрифта акционной цены
+        sizeCamp = driver.findElement(By.cssSelector(".campaign-price"))
+                .getCssValue("font-size");
+        sizeCampDouble = Double.parseDouble(sizeCamp.substring(0, sizeCamp.length() - 2));
+        // Убеждаемся, что она больше
+        assertTrue(sizeCampDouble > sizeRegularDouble);
+    }
+
+    @Test
+    public void checkDuckChrome() {
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        checkDuck(driver);
+        driver.quit();
+    }
+
+    @Test
+    public void checkDuckIE() {
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setCapability(InternetExplorerDriver.REQUIRE_WINDOW_FOCUS, true);
+        WebDriver driver = new InternetExplorerDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        checkDuck(driver);
+        driver.quit();
+    }
+
+    @Test
+    public void checkDuckFirefox() {
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        checkDuck(driver);
+        driver.quit();
     }
 }
