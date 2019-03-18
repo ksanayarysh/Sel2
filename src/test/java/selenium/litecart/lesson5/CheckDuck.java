@@ -44,18 +44,19 @@ public class CheckDuck  {
         WebElement product = products.get(0);
 
         // Получаем название и цены с главной страницы
-        String mainName = product.findElement(By.cssSelector("div.name")).getAttribute("textContent");
-        String mainRegularPrice = product.findElement(By.cssSelector(".regular-price")).getAttribute("textContent");
-        String mainCampaignPrice = product.findElement(By.cssSelector(".campaign-price")).getAttribute("textContent");
+        String mainName = product.findElement(By.cssSelector("div.name")).getText();
+        String mainRegularPrice = product.findElement(By.cssSelector(".regular-price")).getText();
+        String mainCampaignPrice = product.findElement(By.cssSelector(".campaign-price")).getText();
 
         // Проверяем, что цвет обычной цены серый
         String colorRegular = product.findElement(By.cssSelector(".regular-price")).getCssValue("color");
         assertTrue(parseGray(colorRegular));
 
         // Проверяем, что обычная цена зачеркнута
-        String textDecorationRegular = product.findElement(By.cssSelector(".regular-price"))
-                .getCssValue("text-decoration-line");
-        assertEquals("line-through", textDecorationRegular);
+        WebElement p = product.findElement(By.cssSelector(".regular-price"));
+        String regularTag = p.getTagName();
+        assertEquals("s", regularTag);
+
 
         // Получаем размер шрифта обычной цены
         String sizeRegular = product.findElement(By.cssSelector(".regular-price"))
@@ -68,9 +69,8 @@ public class CheckDuck  {
         assertTrue(parseRed(colorCamp));
 
         // Убеждаемся, что акционная цена жирная
-        String textDecorationCamp = product.findElement(By.cssSelector(".campaign-price"))
-                .getAttribute("tagName");
-        assertEquals("STRONG", textDecorationCamp);
+        String textDecorationCamp = product.findElement(By.cssSelector(".campaign-price")).getTagName();
+        assertEquals("STRONG", textDecorationCamp.toUpperCase());
 
         // Получаем размер шрифта акционной цены
         String sizeCamp = product.findElement(By.cssSelector(".campaign-price"))
@@ -83,9 +83,9 @@ public class CheckDuck  {
         // Переходим на страницу утки
         driver.findElement(By.cssSelector("#box-campaigns  li.product a")).click();
         // Получаем ее заголовок и цены
-        String pageName = driver.findElement(By.cssSelector("h1")).getAttribute("textContent");
-        String pageRegularPrice = driver.findElement(By.cssSelector(".regular-price")).getAttribute("textContent");
-        String pageCampaignPrice = driver.findElement(By.cssSelector(".campaign-price")).getAttribute("textContent");
+        String pageName = driver.findElement(By.cssSelector("h1")).getText();
+        String pageRegularPrice = driver.findElement(By.cssSelector(".regular-price")).getText();
+        String pageCampaignPrice = driver.findElement(By.cssSelector(".campaign-price")).getText();
 
 
 
@@ -94,9 +94,8 @@ public class CheckDuck  {
         assertTrue(parseGray(colorRegular));
 
         // Проверяем, что обычная цена зачеркнута
-        textDecorationRegular = driver.findElement(By.cssSelector(".regular-price"))
-                .getCssValue("text-decoration-line");
-        assertEquals("line-through", textDecorationRegular);
+        regularTag = driver.findElement(By.cssSelector(".regular-price")).getTagName();
+        assertEquals("s", regularTag);
 
         // Получаем размер шрифта обычной цены
         sizeRegular = driver.findElement(By.cssSelector(".regular-price"))
@@ -109,9 +108,8 @@ public class CheckDuck  {
         assertTrue(parseRed(colorCamp));
 
         // Убеждаемся, что акционная цена жирная
-        textDecorationCamp = driver.findElement(By.cssSelector(".campaign-price"))
-                .getAttribute("tagName");
-        assertEquals("STRONG", textDecorationCamp);
+        textDecorationCamp = driver.findElement(By.cssSelector(".campaign-price")).getTagName();
+        assertEquals("STRONG", textDecorationCamp.toUpperCase());
 
         // Получаем размер шрифта акционной цены
         sizeCamp = driver.findElement(By.cssSelector(".campaign-price"))
