@@ -3,6 +3,7 @@ package selenium.litecart.lesson5;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import selenium.litecart.BaseTest;
 
 import java.util.ArrayList;
 import java.util.Collections;

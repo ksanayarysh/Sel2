@@ -1,4 +1,4 @@
-package selenium.litecart.lesson5;
+package selenium.litecart;
 
 import org.junit.After;
 import org.junit.Before;
