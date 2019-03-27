@@ -14,7 +14,7 @@ import java.util.Set;
 public class CheckNewWindow extends BaseTest {
 
     private void adminLogin() {
-        getDriver().get("http:/localhost/litecart/admin/");
+        getDriver().get("http:/localhost:8080/litecart/admin/");
 
         getDriver().findElement(By.xpath("//*[@name=\"username\"]")).sendKeys("admin");
         getDriver().findElement(By.xpath("//*[@name=\"password\"]")).sendKeys("123456");
@@ -35,7 +35,7 @@ public class CheckNewWindow extends BaseTest {
     public void checkNewWindow() {
         adminLogin();
 
-        getDriver().get("http://localhost/litecart/admin/?app=countries&doc=countries");
+        getDriver().get("http://localhost:8080/litecart/admin/?app=countries&doc=countries");
 
         // Переходим на редактирование
         getDriver().findElement(By.xpath("//*[contains(@class, 'fa-pencil')]//ancestor::a")).click();
@@ -50,14 +50,17 @@ public class CheckNewWindow extends BaseTest {
         List<WebElement> links = getDriver().findElements(By.xpath("//*[contains(@class, 'fa-external-link')]//ancestor::a"));
 
         // Открыть окно || Необходимо вынести в цикл потом
-        links.get(0).click();
+        for (int i = 0; i < links.size(); i++) {
+            links.get(i).click();
 
-        String newWindow = getWait().until(anyWindowOtherThan(oldWindows));
-        assert(newWindow != null);
-        getDriver().switchTo().window(newWindow);
-        // Do something
-        getDriver().close();
-        getDriver().switchTo().window(mainWindow);
+            String newWindow = getWait().until(anyWindowOtherThan(oldWindows));
+            assert(newWindow != null);
+            getDriver().switchTo().window(newWindow);
+//            System.out.println(getDriver().getTitle());
+            getDriver().close();
+            getDriver().switchTo().window(mainWindow);
+            links = getDriver().findElements(By.xpath("//*[contains(@class, 'fa-external-link')]//ancestor::a"));
+        }
     }
 
 }
